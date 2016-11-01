@@ -1,0 +1,22 @@
+body
+{
+    font-family: sans-serif;
+}
+
+td
+{
+    white-space: nowrap;
+}
+
+button#submit
+{
+    font-size: 20px;
+    width: 100%;
+    background: skyblue;
+    color: white;
+}
+
+small
+{
+    color: orange;
+}

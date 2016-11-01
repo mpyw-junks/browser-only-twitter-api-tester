@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<title>Browser-only Twitter API Tester</title>
+
+<link rel="stylesheet" href="style.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha1.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+<script defer src="lib.js"></script>
+<script defer src="main.js"></script>
+
+<h1>Browser-only Twitter API Tester</h1>
+
+<h2>Settings</h2>
+
+<table border="1">
+    <tr>
+        <th rowspan="4">Credentials</th>
+        <td>Consumer Key</td>
+        <td><input type="text" id="consumer_key" size="76" value=""></td>
+    </tr>
+    <tr>
+        <td>Consumer Secret</td>
+        <td><input type="text" id="consumer_secret" size="76" value=""></td>
+    </tr>
+    <tr>
+        <td>Access Token</td>
+        <td><input type="text" id="access_token" size="76" value=""></td>
+    </tr>
+    <tr>
+        <td>Access Token Secret</td>
+        <td><input type="text" id="access_token_secret" size="76" value=""></td>
+    </tr>
+    <tr>
+        <th colspan="2">Method</th>
+        <td>
+            <select id="method">
+                <option value="get">GET</option>
+                <option value="post">POST</option>
+            </select>
+            <small>Attention: <code>POST</code> will trigger downloads.</small>
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2">URL</th>
+        <td>https://api.twitter.com/1.1/<input type="text" id="endpoint" size="34">.json</td>
+    </tr>
+    <tr>
+        <th rowspan="6">Parameters</th>
+        <td><input type="text" name="name" size="26"></td>
+        <td><input type="text" name="value" size="76"></td>
+    </tr>
+    <tr>
+        <td><input type="text" name="name" size="26"></td>
+        <td><input type="text" name="value" size="76"></td>
+    </tr>
+    <tr>
+        <td><input type="text" name="name" size="26"></td>
+        <td><input type="text" name="value" size="76"></td>
+    </tr>
+    <tr>
+        <td><input type="text" name="name" size="26"></td>
+        <td><input type="text" name="value" size="76"></td>
+    </tr>
+    <tr>
+        <td><input type="text" name="name" size="26"></td>
+        <td><input type="text" name="value" size="76"></td>
+    </tr>
+    <tr>
+        <td><input type="text" name="name" size="26"></td>
+        <td><input type="text" name="value" size="76"></td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <button id="submit">Submit</button>
+        </td>
+    </tr>
+</table>
+
+<h2>Response</h2>
+
+<textarea id="result" rows="120" cols="123"></textarea>
