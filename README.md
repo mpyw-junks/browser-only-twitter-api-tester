@@ -1,4 +1,4 @@
-# browser-only-twitter-api-tester
+# Browser-only Twitter API Tester
 
 All API communications go through JSONP or form submission.
 
